@@ -23,6 +23,11 @@ require_once ( PIGGYBACK_CORE.'/core/init.php' );
  * Defining Media folder URL
  * 
  * @author HOW
- * @since version 0.5
+ * @package PIGGYBACK
+ * @since version 1.1
  */
-define ( 'PIGGYBACK_MEDIA_URL', $piggyback_config['core_url'] . '/media' );
+if(is_dir(dirname ( dirname ( __FILE__ ) ).'/piggyback-media')){
+  define ( 'PIGGYBACK_MEDIA_URL', $piggyback_config['core_url'] . '/piggyback-media' );
+}
+
+
