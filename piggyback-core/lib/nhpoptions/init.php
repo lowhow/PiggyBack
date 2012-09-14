@@ -12,9 +12,16 @@
 class piggyback_nhpoptions extends piggyback_lib_setting { 
 
     function setting () {
-				$this->_version = '1_0_6'; // library version
-				$this->_location_folder = '1_0_6'; // library folder
-				$this->_library_name = 'nhpoptions'; // library name
-				$this->_jquery_dependency = false; // jquery dependency, true or false
+				return array(
+						'1.0.5' => array( // library version
+								'_location_folder' => '1_0_6', // library folder
+								'_library_name' => 'nhpoptions', // library name
+						),
+
+						'1.0.5' => array( // library version
+								'_location_folder' => '1_0_6', // library folder
+								'_library_name' => 'nhpoptions', // library name
+						),
+				);
 		}
 }

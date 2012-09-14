@@ -7,32 +7,30 @@
  */
 
 $piggyback_config = array(
-                      'platform'  =>  'wordpress',  // 'normal', 'wordpress', 'codeigniter'
-											'core_url' => get_bloginfo('stylesheet_directory'), // Core url location without "/piggyback-core".
+											'core_url' =>  get_bloginfo('stylesheet_directory'), // Core url location without "/piggyback-core".
 											/**
 											*		NOTE: If components are jQuery dependent, jQuery will be loaded automatically.
 											*/
 											'jsload' => 'jquery', // 'none', 'jquery'.
-                      'responsive' => true,     // Responsive layout
 											'autoload' => array (
                         
                           /** Bootstrap as a css framework. */
-                          'bootstrap',
+                          array('name' => 'bootstrap', 'version' => '2.1.0', 'responsive' => true),
                           
                           /** Isotope is a jQuery plugin */
-                          //'isotope',
+                          //array('name' => 'isotope', 'version' => '1.5.9'),
                           
                           /** jQuery Validation is a jQuery plugin to validate input fields using jQuery. */
-                          'jqueryvalidation',
+                          array('name' => 'jqueryvalidation', 'version' => ''),
                           
                           /** Flexslider is a jQuery plugin */
-                          'flexslider',
+                          array('name' => 'flexslider', 'version' => ''),
                           
                           /** PrettyPhoto is a jQuery plugin */
-                          'prettyphoto',
+                          array('name' => 'prettyphoto', 'version' => ''),
                           
                           /** NHPOptions is a WordPress Theme Option framework. */
-                          'nhpoptions',
+                          array('name' => 'nhpoptions', 'version' => ''),
                           
                           /** WP Alchemy is a WordPress metabox framework.
                            *
@@ -41,6 +39,14 @@ $piggyback_config = array(
                            *  2. Create file call 'functions-metaboxes.php'.
                            *  3. In 'functions-metaboxes.php', include_once the metaboxes files.
                            */
-                          'wpalchemy'
+                          array('name' => 'wpalchemy', 'version' => ''),
+                          
+                          array('name'=> 'facebook', 'version' => '1.0.0'),
+                          array('name'=> 'google', 'version' => '1.0.0'),
+                          array('name'=> 'pinterest', 'version' => '1.0.0'),
+                          array('name'=> 'linkedin', 'version' => '1.0.0'),
+                          array('name'=> 'twitter', 'version' => '1.0.0')
                         )
                     );
+
+require_once(get_stylesheet_directory().'/piggyback-core/init.php');

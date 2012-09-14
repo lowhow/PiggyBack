@@ -1,4 +1,12 @@
 <?php
+/**
+ * Config Core file for PHP
+ *
+ * @version 2.0
+ * 
+ * @package PIGGYBACK
+ * @since version 1.0
+ */
 
 class piggyback_config {
 
@@ -15,6 +23,9 @@ class piggyback_config {
 
 		function load_config() {
 				global $piggyback_config;
+				if (empty($piggyback_config)) {
+					die ("PIGGYBACK Config not setup correctly !!!!");
+				}
 				
 				foreach ( $piggyback_config as $key => $config ){
 						// check config if error show error

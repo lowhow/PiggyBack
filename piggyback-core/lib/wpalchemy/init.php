@@ -13,15 +13,13 @@
 
 class piggyback_wpalchemy extends piggyback_lib_setting { 
 
-  function setting () {
-    $this->_version = '1_5_0'; // library version
-    $this->_location_folder = '1_5_0'; // library folder
-    $this->_library_name = 'wpalchemy'; // library name
-    $this->_jquery_dependency = true; // jquery dependency, true or false
-  }
+		function setting () {
+				return array(
+						'1.5.0' => array( // library version
+								'_location_folder' => '1_5_0', // library folder
+								'_library_name' => 'wpalchemy', // library name
+						),
+				);
+		}
+
 }
-
-/** Instantiate Bootstrap class */
-//global $piggyback_wpalchemy;
-//$piggyback_wpalchemy = new piggyback_wpalchemy;
-

@@ -13,15 +13,33 @@
 
 class piggyback_bootstrap extends piggyback_lib_setting { 
 
-  function setting () {
-      $this->_version = '2_1_0'; // library version
-      $this->_location_folder = '2_1_0'; // library folder
-      $this->_library_name = 'bootstrap'; // library name
-      $this->_jquery_dependency = true; // jquery dependency, true or false
-      $this->_meta_reponsive = array ( 'content' => 'width=device-width, initial-scale=1.0', 'css' => 'css/bootstrap-responsive.min.css' ); // meta responsive content can be empty
-      $this->_js = array ( 'js/bootstrap.min.js' ); // js path
-      $this->_css = array ( 'css/bootstrap.min.css' ); // css path
-  }
-    
+		function setting () {
+				return array(
+						'2.1.0' => array( // library version
+								'_location_folder' => '2_1_0', // library folder
+								'_library_name' => 'bootstrap', // library name
+								'_jquery_dependency' => true, // jquery dependency, true or false
+								'_meta_reponsive' => array(  // meta responsive content can be empty
+										'content' => 'width=device-width, initial-scale=1.0', 
+										'css' => 'css/bootstrap-responsive.min.css'
+								),
+								'_js' => array('js/bootstrap.min.js'), // js file
+								'_css' => array('css/bootstrap.min.css'), // css file
+						),
+
+						'2.0.4' => array( // library version
+								'_location_folder' => '2_0_4', // library folder
+								'_library_name' => 'bootstrap', // library name
+								'_jquery_dependency' => true, // jquery dependency, true or false
+								'_meta_reponsive' => array(  // meta responsive content can be empty
+										'content' => 'width=device-width, initial-scale=1.0', 
+										'css' => 'css/bootstrap-responsive.min.css'
+								),
+								'_js' => array('js/bootstrap.min.js'), // js file
+								'_css' => array('css/bootstrap.min.css'), // css file
+						),
+				);
+		}
+
 }
 

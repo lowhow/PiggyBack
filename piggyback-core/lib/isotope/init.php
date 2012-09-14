@@ -13,10 +13,13 @@
 class piggyback_isotope extends piggyback_lib_setting { 
 
     function setting () {
-				$this->_version = '2_0_4'; // library version
-				$this->_location_folder = ''; // library version
-				$this->_library_name = 'isotope'; // library name
-				$this->_jquery_dependency = true; // jquery dependency, true or false
-				$this->_js = array ( 'jquery.isotope.min.js' ); // js path
+				return array(
+						'1.5.19' => array( // library version
+								'_location_folder' => '1_5_19', // library folder
+								'_library_name' => 'isotope', // library name
+								'_jquery_dependency' => true, // jquery dependency, true or false
+								'_js' => array('jquery.isotope.min.js'), // js file
+						),
+				);
 		}
 }

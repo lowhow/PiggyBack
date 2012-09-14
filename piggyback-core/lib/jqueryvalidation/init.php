@@ -17,15 +17,15 @@
 
 class piggyback_jqueryvalidation extends piggyback_lib_setting { 
   
-	function setting () {
-		$this->_version = '1_9_0'; // library version
-		$this->_location_folder = '1_9_0'; // library version
-		$this->_library_name = 'jqueryvalidation'; // library name
-		$this->_jquery_dependency = true; // jquery dependency, true or false
-		$this->_js = array ( 'jquery.validate.min.js' ); // js path
-	}
+		function setting () {
+				return array(
+						'1.9.0' => array( // library version
+								'_location_folder' => '1_9_0', // library folder
+								'_library_name' => 'jqueryvalidation', // library name
+								'_jquery_dependency' => true, // jquery dependency, true or false
+								'_js' => array('jquery.validate.min.js'), // js file
+						),
+				);
+		}
 	
 }
-
-global $piggyback_jqueryvalidation;
-$piggyback_jqueryvalidation = new piggyback_jqueryvalidation;

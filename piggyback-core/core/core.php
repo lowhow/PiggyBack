@@ -2,43 +2,50 @@
 /**
  * Basic Core file for PHP
  *
- * @version 1.0
+ * @version 2.0
  * 
  * @package PIGGYBACK
- * @since version 0.1
+ * @since version 1.0
  */
 
 class piggyback_core {
 
-		function __construct () {
-				$this->header = new piggyback_header;
+		function __construct() {
+				$this->header = new piggyback_header();
 				$this->auto_load();
     }
 		
-		function auto_load () {
+		function auto_load() {
 				/** initial the auto loading library file */
-				foreach ( $this->header->get_config ( 'autoload' ) as $autoload ){
-						require_once ( PIGGYBACK_CORE."/lib/".$autoload."/init.php" );
-						$library = "piggyback_".$autoload;
-						$this->$autoload = new $library ();
-						$this->header->set_jquery_dependency ( $this->$autoload->get_jquery_dependency() );
-						$this->header->set_js ( $this->$autoload->get_js() );
-						$this->header->set_css ( $this->$autoload->get_css() );
-						$this->header->set_meta_responsive ( $this->$autoload->get_meta_responsive() );
+				$config = new piggyback_config();
+				foreach ($config->get_config('autoload') as $autoload){
+						$autoload_name = $autoload['name'];
+						$autoload_version = $autoload['version'];						
+						require_once(PIGGYBACK_CORE."/lib/".$autoload_name."/init.php");
+						$library = "piggyback_".$autoload_name;
+						$this->$autoload_name = new $library($autoload_version);
+						$this->header->set_jquery_dependency($this->$autoload_name->get_jquery_dependency());
+						$this->header->set_js($this->$autoload_name->get_js());
+						$this->header->set_css($this->$autoload_name->get_css());
+						$this->header->set_meta_responsive($this->$autoload_name->get_meta_responsive());
 						
-						if ( is_file ( PIGGYBACK_CORE."/".$this->header->get_config( 'platform' )."/functions-".$autoload.".php" ) ) {
-								require_once ( PIGGYBACK_CORE."/".$this->header->get_config( 'platform' )."/functions-".$autoload.".php" );							
+						if (is_file(PIGGYBACK_CORE."/".PIGGYBACK_PLATFORM."/functions-".$autoload_name.".php")) {
+								require_once(PIGGYBACK_CORE."/".PIGGYBACK_PLATFORM."/functions-".$autoload_name.".php");							
 						}
 				}
 				
 				/* include the platform file */
-				require_once ( PIGGYBACK_CORE."/".$this->header->get_config( 'platform' )."/init.php" ); // load plateform
+				if (defined('PIGGYBACK_PLATFORM')){
+						require_once(PIGGYBACK_CORE."/".PIGGYBACK_PLATFORM."/init.php"); // load plateform
+				}
 		}
 
-		function debug () {
+		function debug() {
 				echo "Library loaded : <br />";
-				foreach ( $this as $obj ) {
-						echo str_replace ( "piggyback_", "", get_class ( $obj ) )."<br />";
+				foreach ($this as $obj) {
+						echo $class = str_replace("piggyback_", "", get_class($obj));
+						if ($class != "header") echo " (version : ".$obj->get_version().")";
+						echo"<br />";
 				}
 		}
 }
