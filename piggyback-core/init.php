@@ -25,3 +25,15 @@ require_once(PIGGYBACK_CORE.'/core/core.php');
 require_once(PIGGYBACK_CORE.'/core/functions_util.php');
 
 $piggyback =  new piggyback_core();
+
+
+/**
+ * Defining Media folder URL
+ * 
+ * @author HOW
+ * @package PIGGYBACK
+ * @since version 1.1
+ */
+if(is_dir(dirname ( dirname ( __FILE__ ) ).'/piggyback-media')){
+  define ( 'PIGGYBACK_MEDIA_URL', $piggyback_config['core_url'] . '/piggyback-media' );
+}
