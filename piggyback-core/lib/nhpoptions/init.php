@@ -2,11 +2,11 @@
 /**
  * INIT file for nhp-options
  *
- * @version 1.0.6
+ * @version 2012-Sep-13
  * @link https://github.com/leemason/NHP-Theme-Options-Framework/wiki
  * 
  * @package PiggyBack
- * @since version 0.1
+ * @since version 2.0.0
  */
 
 class piggyback_nhpoptions extends piggyback_lib_setting { 

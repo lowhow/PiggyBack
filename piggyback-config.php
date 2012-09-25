@@ -3,7 +3,8 @@
  * Config File
  *
  * @package PIGGYBACK
- * @since version 0.1
+ * @author Fenzy
+ * @since version 2.0.1
  */
 
 $piggyback_config = array(

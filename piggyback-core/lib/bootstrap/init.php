@@ -2,11 +2,11 @@
 /**
  * INIT file for Boostrap
  *
- * @version 2.0.4
+ * @version 2012-Sep-25
+ * @author How
  * 
  * @package PIGGYBACK
- * @since version 0.1
- * @author How
+ * @since version 2.0.0
  * 
  * @dependencies jQuery
  */

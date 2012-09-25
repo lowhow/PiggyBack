@@ -1,4 +1,13 @@
 <?php
+/**
+ * Header class for HTML
+ *
+ * @version 2.0.1
+ * @author Fenzy
+ * 
+ * @package PIGGYBACK
+ * @since version 1.0
+ */
 
 class piggyback_header {
 
@@ -13,8 +22,7 @@ class piggyback_header {
 		}
 
 		function set_meta_responsive($data) {
-				$config = new piggyback_config();
-				if ($data['css'] && $config->get_config('responsive') == true) {
+				if ($data['css']) {
 						$this->_meta_tag[] = array(
 								'name' => 'viewport',
 								'content' => ( $data['content'] == "") ? 'width=device-width' : $data['content']

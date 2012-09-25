@@ -2,11 +2,11 @@
 /**
  * INIT file for FlexSlider
  *
- * @version 2.0.0
+ * @version 2012-Sep-25
  * @link http://www.woothemes.com/flexslider/
  * 
  * @package PIGGYBACK
- * @since version 0.1
+ * @since version 2.0.0
  * 
  * @dependencies jQuery
  */

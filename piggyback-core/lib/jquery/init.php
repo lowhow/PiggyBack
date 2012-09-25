@@ -2,7 +2,7 @@
 /**
  * INIT file for JQuery
  *
- * @version 1.7.2
+ * @version 2012-Sep-13
  * 
  * @package PIGGYBACK
  * @since version 0.1

@@ -2,12 +2,12 @@
 /**
  * Collection of frequently used php functions to be refered to as utilities.
  *
- * @version 1.0
+ * @version 2.0.1
+ * @author Fenzy
  * 
- * @package PAGGYBACK
- * @since version 0.1
+ * @package PIGGYBACK
+ * @since version 1.0
  */
-
 
 /**
  * DESCRIPTION

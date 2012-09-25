@@ -2,12 +2,14 @@
 /**
  * INIT file for Isotope
  *
- * @version 2.0.4
+ * @version 2012-Sep-13
  * 
  * @package PIGGYBACK
  * @since version 0.1
  * 
  * @dependencies jQuery
+ *
+ * @todo complete this library
  */
 
 class piggyback_isotope extends piggyback_lib_setting { 

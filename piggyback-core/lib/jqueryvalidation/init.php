@@ -1,16 +1,12 @@
 <?php
 /**
- *  @todo 2012/08/06 - Cleanup comments.
- */
-
-/**
  * INIT file for jQuery Validation
  *
- * @version 1.9.0
+ * @version 2012-Sep-13
  * @link http://bassistance.de/jquery-plugins/jquery-plugin-validation/
  * 
  * @package PIGGYBACK
- * @since version 0.1
+ * @since version 2.0.0
  * 
  * @dependencies jQuery
  */

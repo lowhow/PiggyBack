@@ -2,7 +2,7 @@
 /**
  * INIT file for Facebook Social Plugins
  * 
- * @version 1.0.0 2012-Sept-12
+ * @version 2012-Sep-12
  * @link http://developers.facebook.com/docs/plugins/
  * 
  * @package PiggyBack

@@ -1,12 +1,21 @@
 <?php
+/**
+ * Library class for Piggyback
+ *
+ * @version 2.0.1
+ * @author Fenzy
+ * 
+ * @package PIGGYBACK
+ * @since version 1.0
+ */
 
 class piggyback_lib_setting {
 
-		var $_version = '1.0'; 
+		var $_version = '2.0.1'; 
 		var $_location_folder = ''; 
 		var $_library_name = 'library'; 
 		var $_jquery_dependency = true; 
-		var $_meta_reponsive = array();
+		var $_meta_reponsive = array('content' => '', 'css'=> '');
 		var $_js = array();
 		var $_css = array();
 		var $_php = array();
@@ -26,6 +35,7 @@ class piggyback_lib_setting {
 		}
 
 		function setting(){
+				/* Library Settings */
 		}
 
 		function library_url() {
@@ -61,13 +71,15 @@ class piggyback_lib_setting {
 		}
 
 		function get_js() {
+				$_js = array();
 				foreach ($this->_js as $key => $js) {
-						$_js [] = $this->library_url().$js;
+						$_js[] = $this->library_url().$js;
 				}
 				return $_js;
 		}
 
 		function get_css() {
+				$_css = array();
 				foreach ($this->_css as $key => $css) {
 						$_css[] = $this->library_url().$css;
 				}
